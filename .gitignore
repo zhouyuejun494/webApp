@@ -1,7 +1,5 @@
+.idea/*
 node_modules/*
-
-      .idea/*
-
-      build/*
-      dist/*
-      bower_components/*
+build/*
+dist/*
+bower_components/*
