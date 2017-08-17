@@ -1,12 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app" ng-controller="appController">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title ng-bind="title">Title</title>
+    <link rel="stylesheet" href="css/index.css">
 
 </head>
 <body>
+<!--头部-->
+<navs></navs>
 
+<!--内容-->
+<div ui-view="home" ng-show="index == 0"></div>
+<div ui-view="author" ng-show="index == 1"></div>
+<div ui-view="content" ng-show="index == 2"></div>
+<div ui-view="my" ng-show="index == 3"></div>
 
+<!--底部-->
+<tab-bar></tab-bar>
+
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="js/index.js"></script>
+<script>
+
+    var fontSize = window.screen.width;
+    document.getElementsByTagName('html')[0].style.fontSize = fontSize;
+
+</script>
 </body>
 </html>
